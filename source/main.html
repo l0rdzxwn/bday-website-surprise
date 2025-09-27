@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <style>
+    html{
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      padding:0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffafbd, #ffc3a0);
+      color: #333;
+      text-align: center;
+      
+    }
+    .hero {
+      
+      background-image:url("/assets/hero_bg.JPG");
+      background-size:130%;
+      background-position:0vw -25vh;
+      width:100vw;
+      height:800px;
+    }
+    .hero h1 {
+      position: relative;
+      top:15vh;
+      left:10vw;
+      font-size: 6vw;
+      margin:0;
+      text-align:left;
+    }
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .section {
+      padding: 8vh 5vw;
+      
+      margin: 5vw auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 90%;
+    }
+    .gallery img {
+      width: 90%;
+      height: auto;
+      margin: 2vh 0;
+      border-radius: 1em;
+    }
+    .list {
+      text-align: left;
+      max-width: 80%;
+      margin: auto;
+      font-size: 1.1em;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 2em;
+      padding: 1em 2em;
+      background: #ff6f61;
+      color: white;
+      border-radius: 0.8em;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+    }
+    .button:hover {
+      background: #e55b50;
+    }
+
+
+    /* NAV BARS */
+    ul {
+      padding-top:3vh;
+      margin:0;
+      list-style-type: none;
+      display: flex;
+      justify-content:center;
+      gap: 3vw;
+    }
+
+    ul li a{
+      text-decoration: none;
+      font-size: 1.3em;   
+      color: #333;   
+      font-weight:bold;
+      transition:0.5s;
+    }
+
+    ul li a:hover{
+      color:#ffafbd;
+
+    }
+
+    
+
+    /* LETTER SECTION */
+
+    #letter-section{
+      margin:0;
+      height:70vh;
+      background-image: url("/assets/heart_bg.jpg");
+      background-size:contain;
+    }
+    
+  </style>
+</head>
+<body>
+  
+  <div class="hero">
+    <div class="nav-bar">
+    <ul>
+      <li><a href="#message">Letter</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#list">Things I Love</a></li>
+      <li><a href="#surprise">Surprise</a></li>
+    </ul>
+  </div>
+
+    <h1>Happy Birthday, <br> Love!</h1>
+    
+    
+  </div>
+
+  <div class="section"  id="letter-section">
+    <h2 id="message">A Little Letter For You</h2>
+    <p>Dear [Her Name],<br>
+    I just want you to know how much you mean to me. Thank you for being part of my life, and I hope today makes you feel as special as you truly are.</p>
+  </div>
+
+  <div class="section gallery">
+    <h2 id="gallery">Our Memories</h2>
+    <img src="photo1.jpg" alt="Memory 1">
+    <img src="photo2.jpg" alt="Memory 2">
+    <img src="photo3.jpg" alt="Memory 3">
+  </div>
+
+  <div class="section">
+    <h2 id="list">10 Things I Love About You</h2>
+    <div class="list">
+      <ol>
+        <li>Your smile</li>
+        <li>Your kindness</li>
+        <li>Your laugh</li>
+        <li>Your intelligence</li>
+        <li>Your hugs</li>
+        <li>Your support</li>
+        <li>Your style</li>
+        <li>Your voice</li>
+        <li>Your energy</li>
+        <li>You being you</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 id="surprise">A Little Surprise</h2>
+    <p>Click below for something special.</p>
+    <a href="surprise.html" class="button">Open Surprise</a>
+  </div>
+
+  <div class="section">
+    <h2>Always Yours</h2>
+    <p>Happy Birthday again, [Her Name]. I’m so lucky to have you in my life.</p>
+  </div>
+</body>
+</html>
