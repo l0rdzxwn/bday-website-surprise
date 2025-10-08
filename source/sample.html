@@ -293,22 +293,22 @@
             heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
             heart.className = 'floating-heart';
             
-            
-            const startX = Math.random() * 80 + 10;
+            // Random starting position within the list item
+            const startX = Math.random() * 80 + 10; // 10% to 90% width
             heart.style.left = startX + '%';
             heart.style.bottom = '50%';
             
-           
-            const randomX = (Math.random() - 0.5) * 100; 
-            const randomRotate = (Math.random() - 0.5) * 60; 
+            // Random movement direction
+            const randomX = (Math.random() - 0.5) * 100; // -50 to 50 pixels
+            const randomRotate = (Math.random() - 0.5) * 60; // -30 to 30 degrees
             heart.style.setProperty('--x', randomX + 'px');
             heart.style.setProperty('--rotate', randomRotate + 'deg');
             
             this.appendChild(heart);
             
-           
+            // Remove heart after animation completes
             setTimeout(() => heart.remove(), 1500);
-          }, i * 200); 
+          }, i * 200); // 200ms delay between each heart
         }
       });
     });
