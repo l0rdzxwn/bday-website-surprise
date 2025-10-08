@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
   <title>Happy Birthday!</title>
   <style>
     html{
@@ -12,36 +15,41 @@
       margin: 0;
       padding:0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #ffafbd, #ffc3a0);
+      background: #F7CDDB;
       color: #333;
       text-align: center;
       
     }
     .hero {
       
-      background-image:url("/assets/hero_bg.JPG");
-      background-size:130%;
-      background-position:0vw -25vh;
+      background-image:url("/assets/bg/hero_bg.JPG");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position:center;
       width:100vw;
-      height:800px;
+      height:100vh;
+      
     }
     .hero h1 {
-      position: relative;
-      top:15vh;
-      left:10vw;
-      font-size: 6vw;
+      position:relative;
+      top:5vh;
+      font-size: 2vw;
       margin:0;
-      text-align:left;
+      letter-spacing: 1vw;
+      
+      
     }
     .hero p {
+      position:relative;
+      top:10vh;
+      left:3vw;
       font-size: 1.2em;
     }
 
     .section {
       padding: 8vh 5vw;
-      
       margin: 5vw auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      
       max-width: 90%;
     }
     .gallery img {
@@ -74,12 +82,14 @@
 
     /* NAV BARS */
     ul {
-      padding-top:3vh;
+      padding-top:2vh;
       margin:0;
+      padding-bottom: 2vh;
       list-style-type: none;
       display: flex;
       justify-content:center;
-      gap: 3vw;
+      gap: 8vw;
+      backdrop-filter: blur(20px);
     }
 
     ul li a{
@@ -96,6 +106,7 @@
     }
 
     
+    
 
     /* LETTER SECTION */
 
@@ -104,38 +115,56 @@
       height:70vh;
       background-image: url("/assets/heart_bg.jpg");
       background-size:contain;
+      
     }
+
+    /* SECTION GALLERY */
+    #memory1{
+      margin:0;
+      filter:drop-shadow(5px 7px 5px rgba(0, 0, 0, 0.459))
+    }
+    #memory2{
+      margin:0;
+      filter:drop-shadow(5px 7px 5px rgba(0, 0, 0, 0.459))
+    }
+    #memory3{
+      margin:0;
+      filter:drop-shadow(5px 7px 5px rgba(0, 0, 0, 0.459))
+    }
+    #gallery{
+      font-family: "Monsieur La Doulaise", cursive;
+      font-size: 6vw;
+    }
+    #gallery-section{
+      background: linear-gradient(180deg, #F7CDDB 0%, #ec7ea3 50%, #F7CDDB 100%);
+    }
+    
     
   </style>
 </head>
 <body>
   
   <div class="hero">
-    <div class="nav-bar">
-    <ul>
-      <li><a href="#message">Letter</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#list">Things I Love</a></li>
-      <li><a href="#surprise">Surprise</a></li>
-    </ul>
-  </div>
-
-    <h1>Happy Birthday, <br> Love!</h1>
     
-    
+    <h1>H A P P Y B I R T H D A Y</h1>
   </div>
 
   <div class="section"  id="letter-section">
-    <h2 id="message">A Little Letter For You</h2>
-    <p>Dear [Her Name],<br>
-    I just want you to know how much you mean to me. Thank you for being part of my life, and I hope today makes you feel as special as you truly are.</p>
-  </div>
+    
+    <h2 id="message-title">A Little Letter For You</h2>
+    <p>Dear S,<br>
+      I just want you to know how much you mean to me. Thank you for being part of my life, and I hope today makes you feel as special as you truly are.</p>
+      
+      
+    </div>
 
-  <div class="section gallery">
-    <h2 id="gallery">Our Memories</h2>
-    <img src="photo1.jpg" alt="Memory 1">
-    <img src="photo2.jpg" alt="Memory 2">
-    <img src="photo3.jpg" alt="Memory 3">
+  <div class="section gallery" id="gallery-section">
+    <div id="gall-content">
+      <h2 id="gallery">Our Memories</h2>
+      <img id="memory1" src="/assets/personal/memories_set1.png" alt="Memory 1">
+      <img id="memory2" src="/assets/personal/memories_set2.png" alt="Memory 2">
+      <img id="memory3" src="/assets/personal/memories_set3.png" alt="Memory 3"> 
+    </div>
   </div>
 
   <div class="section">
