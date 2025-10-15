@@ -15,7 +15,7 @@
       margin: 0;
       padding:0;
       font-family: Poppins, sans-serif;
-      background: #F7CDDB;
+      background: #f9d3de;
       color: #333;
       text-align: center;
       
@@ -39,11 +39,20 @@
       
       
     }
+    
     .hero p {
       position:relative;
       top:10vh;
       left:3vw;
       font-size: 1.2em;
+    }
+
+    #phone-title{
+      display:none;
+    }
+
+    #tags-title{
+      display:none;
     }
 
     .section {
@@ -78,45 +87,23 @@
       font-weight: bold;
       font-size: 1em;
     }
+
     .button:hover {
       background: #e55b50;
     }
 
-
-    /* NAV BARS */
-    ul {
-      padding-top:2vh;
-      margin:0;
-      padding-bottom: 2vh;
-      list-style-type: none;
-      display: flex;
-      justify-content:center;
-      gap: 8vw;
-      backdrop-filter: blur(20px);
-    }
-
-    ul li a{
-      text-decoration: none;
-      font-size: 1.3em;   
-      color: #333;   
-      font-weight:bold;
-      transition:0.5s;
-    }
-
-    ul li a:hover{
-      color:#ffafbd;
-
-    }
-
-    
-    
-
     /* LETTER SECTION */
+    #message-title{
+      color:#e91e63;
+      font-size:3vw;
+      margin:0;
+      font-family:Poppins,serif;
+    }
 
     #letter-section{
       margin:0;
       width:100vw;
-      height:70vh;
+      height:90vh;
       background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
       background-size:contain;
       
@@ -127,7 +114,7 @@
         box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         background-color:white;
         width: 85%;
-        height: 70%;
+        height: 70vh;
     }
 
     /* SECTION GALLERY */
@@ -181,14 +168,14 @@
     }
 
     .list ol li{
-      background-color:white;
+      background-color:#FFFFFF;
       margin:2%;
       padding:2%;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.244);
       list-style-type:none;
       border-radius:25px;
       font-size:1.1em;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease-in-out;
       position: relative;
       overflow: hidden;
       cursor: pointer;
@@ -217,11 +204,109 @@
       }
     }
 
+    
+
     .floating-heart {
       position: absolute;
       pointer-events: none;
       font-size: 1.5rem;
       animation: floatingHeart 1.5s ease-out forwards;
+    }
+
+    /*MEDIA QUERIES*/
+    @media (max-width: 1280px){
+      .hero {
+      
+      background-image:url("/assets/bg/hero_bg_1280px.png");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position:center;
+      width:100vw;
+      height:100vh;
+      
+    }
+    }
+
+    @media (max-width: 1024px){
+      .hero {
+      
+      background-image:url("/assets/bg/hero_bg_1024px.png");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position:center;
+      width:100vw;
+      height:100vh;
+      
+    }
+
+    #TILAY-section{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      width:100vw;
+      height:950px;
+      padding-top:8%;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    }
+
+    #message-title{
+      color:#e91e63;
+      font-size:5vw;
+      margin:0;
+      font-family:Poppins,serif;
+    }
+    }
+
+    @media (max-width: 760px){
+      .hero {
+      background-image:url("/assets/bg/hero_bg_760px.PNG");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position:center;
+      width:100vw;
+      height:100vh;
+      
+    }
+
+    .hero h1{
+      font-size:3vw;
+    }
+
+    #message-title{
+      color:#e91e63;
+      font-size:5vw;
+      margin:0;
+      padding-top:3vh;
+      font-family:Poppins,serif;
+    }
+
+    #phone-title{
+      display:block;
+      font-size:13vw;
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom:6vh;
+      font-weight:1;
+    }
+
+    #tags-title{
+      display:block;
+      font-size:3vw;
+      list-style:none;
+      display:flex;
+      gap:8vw;
+      padding:0;
+      justify-content:center;
+    }
+
+    #TILAY-section{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      width:100vw;
+      height:850px;
+      padding-top:8%;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    }
     }
     
   </style>
@@ -230,14 +315,23 @@
   
   <div class="hero">
     
-    <h1>H A P P Y B I R T H D A Y</h1>
+    <h1 id="birthday-title" class="hero-titles">H A P P Y B I R T H D A Y</h1>
+    <h1 id="phone-title" class="hero-titles">SHANADINE</h1>
+    
+      <ul id="tags-title">
+        <li>my baby</li>
+        <li>|</li>
+        <li>my wife</li>
+        <li>|</li>
+        <li>my love</li>
+      </ul>
   </div>
 
   <div class="section"  id="letter-section">
     <div class ="section" id="text-background">   
-      <h2 id="message-title">A Little Letter For You</h2>
-      <p style="width:80%; font-size:1.2em; word-wrap: break-word;">Dear S,<br>
-        
+      <h2 id="message-title">✉ A Little Letter For You ✉</h2>
+      <p style="width:80%; font-size:1.2em; word-wrap: break-word;" id="message-content">Dear S,<br>
+        First of all, I wanna greet you a happiest birthday!! Thank you sooo much sa lahattt!! Kahit may ups and downs tayo, I still wanna thank you for staying with me kahit medyo marami akong pagkakamali at pagkukulang sayo ^^ Thank you for being my takbuhan sa oras ng kagipitann, You'll always there for me kaya thank you sayo babyy :3 You'll always be my wife and the only woman that i'll lovee!! Ikaw at ikaw pa rin ang pipiliin ko. Lagi akong Mananatili sayo baby koo :> Kahit anong mangyari ikaw parin ang Patutunguhan ko. Lastly, ikaw lang ang Sinderela ng buhay ko :> hehe I love you babyy! Even though things aren't perfect, I'm forever grateful that it's you I get to go through with it. I'll always love you, Thank you for staying, trying, being strong, and for being you.   
       </p>
     </div>
       
@@ -257,16 +351,16 @@
       <h2 id="list">♡ 10 Things I Love About You ♡</h2>
       <div class="list">
         <ol>
-          <li>💖 Your beautiful and gorgeous smile</li>
-          <li>💖 Your kindness and empathy</li>
+          <li>💖 Your beautiful and gorgeous smile (my favorite!)</li>
+          <li>💖 Your kindness and empathy lalo na sa ibang tao ^^</li>
           <li>💖 Your cute laugh</li>
-          <li>💖 Your intelligence</li>
-          <li>💖 Your sweet loving hugs</li>
+          <li>💖 Your intelligence lalo sa acads B></li>
+          <li>💖 Your sweet loving hugs </li>
           <li>💖 Your never ending support</li>
-          <li>💖 Your awesome style</li>
-          <li>💖 Your pretty voice</li>
-          <li>💖 Your high energy</li>
-          <li>💖 And especially for being you</li>
+          <li>💖 Your pasarap outfits :P</li>
+          <li>💖 Your pretty & CUTESY voice</li>
+          <li>💖 Your patience (HAHAHAHA seryoso)</li>
+          <li>💖 And especially for being YOU</li>
         </ol>
       </div>
     </div>
@@ -274,7 +368,7 @@
 
   <div class="section">
     <h2>Always Yours</h2>
-    <p>Happy Birthday again, [Her Name]. I'm so lucky to have you in my life.</p>
+    <p>Happy Birthday again, Gail. I'm sooooo lucky to have you in my life.</p>
   </div>
 
   <script>
